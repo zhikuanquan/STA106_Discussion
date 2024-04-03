@@ -1,0 +1,111 @@
+---
+output: 
+  pdf_document:
+    number_sections: true
+urlcolor: black
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { {\bf STA 106B: Applied Statistical Methods - Analysis of Variance
+		\hfill Spring 2024} }
+       \vspace{4mm}
+       \hbox to 6.28in { {\Large \hfill Discussion 1  \hfill} }
+       \vspace{2mm}
+       \hbox to 6.28in { {\it \hfill TA: Zhikuan Quan, zkquan@ucdavis.edu \hfill} }
+       \vspace{1mm}
+       \hbox to 6.28in { {\it \hfill \href{https://ucdavis.zoom.us/j/2478285521}{Office Hour: Thursday 4:30 pm - 6:30 pm} \hfill} }
+       }
+   }
+\end{center}
+
+\vspace*{4mm}
+
+
+# Discussion
+The discussion section will provide additional help on \textbf{data analysis (in R)}, \textbf{concept understanding}, and \textbf{homework assignments/quizzes}. Discussion notes will be uploaded to the Home page on Canvas weekly.
+
+# Setting Up R
+## Installing R
+One of the wonderful things about $R$ is that it is free. This way, you may work on your homework in the comfort of your home. To download and install R, complete the following steps:
+\begin{enumerate}
+	\item Go to \url{http://cran.freestatistics.org/}
+	\item If you have Linux, click "Download R for Linux" and select the appropriate platform.
+	\item If you have a Mac, click "Download R for (Mac) OS X", and select the appropriate package based on your operating system.
+	\item Follow the instructions of the installer.
+\end{enumerate}
+Congratulations, you have now (hopefully) installed R.
+
+## Installing RStudio
+To install RStudio, complete the following steps:
+\begin{enumerate}
+	\item Go to \href{http://rstudio.org/}{http://rstudio.org/}
+	\item Click on the "Download RStudio" button.
+	\item Select the "Desktop" option.
+	\item Select the appropriate link (usually the recommended one for your system works just fine).
+\end{enumerate}
+
+\newpage
+## Installing R Markdown packages
+- Install Markdown package by typing this command in R Console:
+```{r, eval=FALSE}
+install.packages('rmarkdown')
+```
+- Install LaTeX (TinyTeX) for PDF reports by typing this command in R Console:
+```{r, eval=FALSE}
+install.packages ('tinytex')
+```
+- Once the installation has been completed, type
+```{r, eval=FALSE}
+tinytex::install_tinytex()
+```
+
+
+# Brief introduction to Rstudio and R Markdown
+
+## Rstudio
+\begin{itemize}
+	\item Click the RStudio icon to run this program, and R will open automatically in the background at the same time. You should have 4 panels. A brief description of the four windows follows:
+	\begin{enumerate}
+		\item \textbf{Environment, History, Build, VCS}: This window lists all Variables, Data, and Functions defined by us.
+		\item \textbf{Files, Plots, Packages, Help}: We can use the help or \text{?} command to get the documentation of any functions, and the relevant help document will be opened. Furthermore, if we plot a figure, it will be displayed in this panel as well.
+		\item \textbf{Console}: The place we can type in commands and retrieve our output.
+		\item \textbf{Source}: The place to store our commands.
+	\end{enumerate}
+	\item Ways of typing commands in R:
+	\begin{enumerate}
+		\item Type code in Console
+		\item \textbf{Recommended}: Create a new source file, type code in the file: \\
+		click the green cross (+) in the top left corner, and choose "R script".
+	\end{enumerate}
+	\item Running R code:
+	\begin{enumerate}
+		\item In R Console: hit *Enter* after the command line
+		\item In R Source files:\\
+		 Place the cursor in the line or highlight the part you want to run and hit the "run" button on the menu, or apply the shortcut: \textbf{command + Return(MAC)} or \textbf{Ctrl + Enter(Windows)}
+	\end{enumerate}
+	\item Save R Source files (Script, notebook, markdown):
+	\begin{enumerate}
+		\item click the blue square button in the source window.
+		\item click File $>$ Save/ Save as.
+	\end{enumerate}
+\end{itemize}
+
+
+## R Markdown
+
+- Create an R markdown file:
+    1. Click the green ''+" in the top left in Rstudio > R markdown > write a title and choose output file format > OK
+    2. Type text in the white space for your report
+    3. Write R code in the grey R chunk, which can be created by typing ` ```{r} ` at the begining and ` ``` ` at the end.
+    4. Click the **Knit** button to generate your pdf/html file by R Markdown file.
+    
+- More details about R Markdown: \url{https://rmarkdown.rstudio.com/authoring_basics.html}
+
+- An R Markdown Cookbook: \url{https://bookdown.org/yihui/rmarkdown-cookbook/}
+

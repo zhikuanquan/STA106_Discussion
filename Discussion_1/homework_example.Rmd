@@ -1,0 +1,56 @@
+---
+title: Homework Example
+author: STA 106B | Zhikuan Quan | April 2024
+header-includes:
+   - \usepackage{graphicx,verbatim}
+   - \renewcommand{\abstractname}{}
+geometry: margin=0.75in
+output: pdf_document
+---
+
+
+```{r, echo=FALSE, message=FALSE}
+# Packages required for this homework
+library(tidyverse)
+library(knitr)
+# load the data
+# read.table or read.csv or type in the data by yourself
+data1 = data.frame(Treatment = format(c(rep(0,8), rep(1,8))),
+                   Response = c(6.98,5.15,2.78,4.94,7.18,5.7,4.7,5.69,
+                                11.23,7.9,6,6.97,6.32,7.02,6.84,8.53))
+```
+
+## Problem 1
+
+### a) Show the data
+
+I use the knitr to generate the table.
+
+```{r, echo=FALSE, message=FALSE}
+# Problem 1
+## a)
+t(data1) %>% 
+  kable(caption = "Data 1",
+        align = "r")
+```
+
+### b) Plot the boxplot of the data
+```{r, echo=FALSE, message=FALSE, fig.height = 4, fig.width = 6, fig.align = "center"}
+# 
+## b)
+boxplot(Response~Treatment,data=data1)
+stripchart(Response~Treatment, vertical = TRUE, data = data1,
+    method = "jitter", add = TRUE, pch = 20, col = 'blue')
+```
+
+
+
+
+\clearpage
+
+\hrulefill
+
+\begin{center} Appendix: R Script \end{center}
+
+```{r, ref.label=knitr::all_labels(),echo=TRUE,eval=FALSE}
+```
