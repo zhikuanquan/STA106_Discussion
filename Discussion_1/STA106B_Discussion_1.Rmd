@@ -17,9 +17,11 @@ knitr::opts_chunk$set(echo = TRUE)
        \vspace{4mm}
        \hbox to 6.28in { {\Large \hfill Discussion 1  \hfill} }
        \vspace{2mm}
-       \hbox to 6.28in { {\it \hfill TA: Zhikuan Quan, zkquan@ucdavis.edu \hfill} }
+       \hbox to 6.28in { {\it \hfill TA: Zach Quan, zkquan@ucdavis.edu \hfill} }
        \vspace{1mm}
-       \hbox to 6.28in { {\it \hfill \href{https://ucdavis.zoom.us/j/2478285521}{Office Hour: Thursday 4:30 pm - 6:30 pm} \hfill} }
+       \hbox to 6.28in { {\it \hfill \href{https://ucdavis.zoom.us/j/2478285521}{Office Hour: Thursday 5:00 pm - 7:00 pm} \hfill} }
+        \vspace{1mm}
+       \hbox to 6.28in { {\it \hfill {Zoom Link: https://ucdavis.zoom.us/j/2478285521} \hfill} }
        }
    }
 \end{center}
@@ -72,7 +74,7 @@ tinytex::install_tinytex()
 \begin{itemize}
 	\item Click the RStudio icon to run this program, and R will open automatically in the background at the same time. You should have 4 panels. A brief description of the four windows follows:
 	\begin{enumerate}
-		\item \textbf{Environment, History, Build, VCS}: This window lists all Variables, Data, and Functions defined by us.
+		\item \textbf{Environment, History}: This window lists all Variables, Data, and Functions defined by us.
 		\item \textbf{Files, Plots, Packages, Help}: We can use the help or \text{?} command to get the documentation of any functions, and the relevant help document will be opened. Furthermore, if we plot a figure, it will be displayed in this panel as well.
 		\item \textbf{Console}: The place we can type in commands and retrieve our output.
 		\item \textbf{Source}: The place to store our commands.
@@ -100,7 +102,7 @@ tinytex::install_tinytex()
 ## R Markdown
 
 - Create an R markdown file:
-    1. Click the green ''+" in the top left in Rstudio > R markdown > write a title and choose output file format > OK
+    1. Click the green "+" in the top left in Rstudio > R markdown > write a title and choose output file format > OK
     2. Type text in the white space for your report
     3. Write R code in the grey R chunk, which can be created by typing ` ```{r} ` at the begining and ` ``` ` at the end.
     4. Click the **Knit** button to generate your pdf/html file by R Markdown file.
